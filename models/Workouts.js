@@ -17,8 +17,12 @@ const WorkoutSchema = new Schema({
                 type: String,
                 trim: true,
                 required: true,
+                minLength: 1,
             },
-            duration: Number,
+            duration: {
+                type: Number,
+                min: 1,
+            },
             weight: Number,
             reps: Number,
             sets: Number,
