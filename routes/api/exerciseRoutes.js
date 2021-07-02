@@ -2,25 +2,21 @@
 const router = require('express').Router();
 const db = require('../../models');
 
-// Route to get workouts
-router.get('/', async (req, res) => {
+// Async function that is used in the following get routes
+async function getWorkouts(req, res) {
     try {
         const workoutData = await db.Workout.find({})
         res.status(200).json(workoutData)
     } catch (err) {
         res.status(400).json(err)
     }
-})
+}
 
 // Route to get workouts
-router.get('/range', async (req, res) => {
-    try {
-        const workoutData = await db.Workout.find({})
-        res.status(200).json(workoutData)
-    } catch (err) {
-        res.status(400).json(err)
-    }
-})
+router.get('/', getWorkouts)
+
+// Route to get workouts
+router.get('/range', getWorkouts)
 
 // Route to create workouts
 router.post('/', async (req, res) => {
@@ -32,6 +28,7 @@ router.post('/', async (req, res) => {
     }
 })
 
+// Route to create exercises
 router.put('/:id', async (req, res) => {
     try{
         const addExercise = await db.Workout.updateOne(
