@@ -31,15 +31,12 @@ router.post('/', async (req, res) => {
 // Route to create exercises
 router.put('/:id', async (req, res) => {
     try{
-        const addExercise = await db.Workout.updateOne(
+        const addExercise = await db.Workout.findByIdAndUpdate(req.params.id,
             {
-                id: mongojs.ObjectId(req.params.id)
-            },
-            {
-                $push: {
-                    exercises: req.body
+                $push: { 
+                    exercises: req.body 
                 }
-            }
+            },
         );
         res.status(200).json(addExercise)
     } catch (err) {
