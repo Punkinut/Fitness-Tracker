@@ -12,10 +12,8 @@ async function getWorkouts(req, res) {
     }
 }
 
-// Route to get workouts
+// Routes to get workouts
 router.get('/', getWorkouts)
-
-// Route to get workouts
 router.get('/range', getWorkouts)
 
 // Route to create workouts
