@@ -6,6 +6,13 @@ const db = require('../../models');
 async function getWorkouts(req, res) {
     try {
         const workoutData = await db.Workout.find({})
+        workoutData.forEach((block) => {
+            const arrDuration = [];
+            block.exercises.forEach((exercise) => {
+                arrDuration.push(exercise.duration)
+            })
+            block.totalDuration = arrDuration.reduce((x, y) => x + y);
+        })
         res.status(200).json(workoutData)
     } catch (err) {
         res.status(400).json(err)
