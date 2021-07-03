@@ -25,6 +25,7 @@ function populateChart(data) {
   const labels = data.map(({ day }) => {
     const date = new Date(day);
 
+
     // Use JavaScript's `Intl` object to help format dates
     return new Intl.DateTimeFormat('en-US', {
       weekday: 'short',
@@ -32,6 +33,8 @@ function populateChart(data) {
       day: 'numeric',
     }).format(date);
   });
+
+  const last7 = labels.slice(Math.max(labels.length - 7, 0))
 
   let lineChart = new Chart(line, {
     type: 'line',

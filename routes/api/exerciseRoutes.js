@@ -6,8 +6,9 @@ const db = require('../../models');
 async function getWorkouts(req, res) {
     try {
         const workoutData = await db.Workout.find({})
+        const last7 = await workoutData.slice(Math.max(workoutData.length - 7, 0))
         // Total Duration algorithm
-            workoutData.forEach((block) => {
+            last7.forEach((block) => {
                 const arrDuration = [];
                 if (block.exercises[0] !== undefined) {
                     block.exercises.forEach((exercise) => {
@@ -16,7 +17,7 @@ async function getWorkouts(req, res) {
                     block.totalDuration = arrDuration.reduce((x, y) => x + y);
                 }
             })
-        res.status(200).json(workoutData)
+        res.status(200).json(last7)
     } catch (err) {
         res.status(400).json(err)
     }
