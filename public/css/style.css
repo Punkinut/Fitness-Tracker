@@ -14,8 +14,10 @@ body,
   cursor: default;
 }
 
-body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+body,
+.font {
+  font-family: "Roboto", sans-serif !important;
+  color: #484848;
 }
 
 .no-box {
