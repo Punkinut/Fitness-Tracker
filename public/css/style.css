@@ -22,6 +22,16 @@ body,
 
 .no-box {
   box-shadow: none !important;
+  border-radius: 15px !important;
+  padding: 20px !important;
+}
+
+.left-button {
+  border-radius: 5px 0px 0px 5px !important;
+}
+
+.right-button {
+  border-radius: 0px 5px 5px 0px !important;
 }
 
 .positive {
@@ -29,7 +39,7 @@ body,
 }
 
 .blue {
-  background: #c4c4c4 !important;
+  background: #c4c4c4b6 !important;
 }
 
 nav {
