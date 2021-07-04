@@ -14,12 +14,23 @@ body,
   cursor: default;
 }
 
+canvas {
+  background-color: white !important;
+  border: 30px solid white !important;
+  border-radius: 10px;
+  margin: 20px 0px;
+}
+
 body,
 .font {
   font-family: "Roboto", sans-serif !important;
   color: #484848;
 }
 
+.dash {
+  padding-top: 70px;
+  padding-bottom: 25px;
+}
 .head-font {
   font-family: "Roboto Slab", sans-serif !important;
   color: #484848;
@@ -100,7 +111,7 @@ body,
 }
 
 .blue {
-  background: #c4c4c4b6 !important;
+  background: #c4c4c479 !important;
 }
 
 nav {

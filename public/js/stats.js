@@ -51,7 +51,6 @@ function populateChart(data) {
       ],
     },
     options: {
-      responsive: true,
       title: {
         display: true,
         text: 'Time Spent Working Out (Last 7 days)',
