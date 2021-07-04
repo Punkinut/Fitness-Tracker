@@ -26,6 +26,27 @@ body,
   padding: 20px !important;
 }
 
+.input {
+  border: none;
+  background: none;
+  border-radius: 0px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.226);
+  font-family: "Roboto", sans-serif !important;
+}
+
+.input:focus {
+  outline: 0 !important;
+}
+
+.label {
+  font-family: "Roboto", sans-serif !important;
+  font-weight: 600;
+}
+
+.title {
+  text-align: center;
+}
+
 .button {
   display: flex !important;
   justify-content: center;
