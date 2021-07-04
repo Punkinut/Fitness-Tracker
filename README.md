@@ -5,7 +5,7 @@ A full stack fitness tracking application with the back-end supported by mongoDB
 ## Deployment
 
 My Fitness Tracker has been deployed here:
-[Fitness Tracker](#)
+[Fitness Tracker](https://punkintfitness.herokuapp.com/?id=60e12e3054d2b20015bb9bfd)
 
 ## Why make this?
 
