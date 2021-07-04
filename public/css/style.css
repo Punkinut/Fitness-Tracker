@@ -54,25 +54,45 @@ body,
   text-align: center;
 }
 
+.sub-font {
+  font-size: 20px;
+  opacity: 50%;
+}
+
 .button {
   display: flex !important;
   justify-content: center;
   align-items: center;
+  height: 70px !important;
+  padding-bottom: none !important;
 }
 
 .left-button {
-  border-radius: 5px 0px 0px 5px !important;
+  font-weight: 400 !important;
+  font-family: "Roboto", sans-serif !important;
+  font-size: 18px !important;
+  border-radius: 5px !important;
   transition: all 100ms ease-in-out !important;
+  margin-right: 20px !important;
+}
+
+.workout-stats strong {
+  opacity: 90% !important;
 }
 
 .right-button {
-  border-radius: 0px 5px 5px 0px !important;
+  font-weight: 400 !important;
+  border-radius: 5px !important;
+  font-family: "Roboto", sans-serif !important;
+  font-size: 18px !important;
   transition: all 100ms ease-in-out !important;
 }
 
-.left-button,
+.left-button:hover,
 .right-button:hover {
-  opacity: 90% !important;
+  background: none !important;
+  color: #484848da !important;
+  border: 2px solid #4848482f;
 }
 
 .positive {
@@ -114,7 +134,7 @@ nav a:hover {
 }
 
 header {
-  height: 150px;
+  height: 190px;
   padding-top: 80px;
   text-align: center;
   font-size: 1.5rem;
@@ -516,5 +536,9 @@ form > button {
   nav {
     text-align: center !important;
     padding: 10px !important;
+  }
+
+  .no-box {
+    width: 95% !important;
   }
 }
