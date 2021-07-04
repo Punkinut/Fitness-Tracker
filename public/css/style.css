@@ -20,6 +20,13 @@ body,
   color: #484848;
 }
 
+.head-font {
+  font-family: "Roboto Slab", sans-serif !important;
+  color: #484848;
+  letter-spacing: 0.7px;
+  font-size: 30px;
+}
+
 .no-box {
   box-shadow: none !important;
   border-radius: 15px !important;
@@ -52,12 +59,20 @@ body,
   justify-content: center;
   align-items: center;
 }
+
 .left-button {
   border-radius: 5px 0px 0px 5px !important;
+  transition: all 100ms ease-in-out !important;
 }
 
 .right-button {
   border-radius: 0px 5px 5px 0px !important;
+  transition: all 100ms ease-in-out !important;
+}
+
+.left-button,
+.right-button:hover {
+  opacity: 90% !important;
 }
 
 .positive {
@@ -494,5 +509,12 @@ form > button {
   100% {
     opacity: 0;
     right: -320px;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  nav {
+    text-align: center !important;
+    padding: 10px !important;
   }
 }
